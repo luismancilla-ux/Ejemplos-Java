@@ -1,0 +1,90 @@
+import java.util.Scanner;
+
+public class examen2 {
+   public static void main(String[] args){
+
+      Scanner sc = new Scanner(System.in);
+      String alimento;
+      String nu;
+      int i;
+      String arr[] = new String[5];
+      String arr2[]= new String [5];
+      
+      System.out.println("Centro huellitas de amor");
+      for(i=0; i<arr.length; i++){
+         System.out.println("Ingresa el nombre de el perrito " + (i+1)+" :");
+         nu = sc.next();
+         arr[i] = nu;
+      }
+      System.out.println("");
+      for(i=0; i<arr2.length; i++){
+         System.out.println("Ingresa el nombre de el alimento que consume el perrito "+(i+1)+" :");
+         alimento = sc.next();
+         arr2[i] = alimento;
+      }
+      System.out.println();
+      System.out.println("Lista de perritos");
+
+      for(i=0; i<arr.length; i++){
+         System.out.println((i+1)+" "+arr[i]);
+      }
+      System.out.println("");
+      System.out.println("Ingresa el nombre del perrito que deseas consular : ");
+      String perrito = sc.next();
+      int index = -1;
+      for ( i = 0; i < 5; i++) {
+        if (arr[i].equals(perrito)) {
+          index = i;
+          break;
+        }
+      }
+      if (index != -1) {
+        System.out.println("Elemento encontrado en el índice " + (index+1));
+        System.out.println("Nombre de el perrito: " + arr[index]);
+        System.out.println("Alimeto: " + arr2[index]);
+      } else {
+        System.out.println("Perrito no encontrado");
+      }
+
+      if(index == 0 ){
+         System.out.print("Ingresa la cantidad(kg) de alimento con la que cuentas : ");
+         double catidad = sc.nextDouble();
+         System.out.println(catidad);
+         System.out.println("Y con cuantos kg de alimento alimentaras a : "+arr[index]);
+         double cant2 = sc.nextDouble();
+         double alimentoSobrante = (catidad - cant2);
+         System.out.println();
+         System.out.println("La cantidad de alimento sobrante es de: "+alimentoSobrante);
+
+        }else if(index == 1){
+         System.out.print("Ingresa la cantidad(kg) de alimento con la que cuentas : ");
+         double catidad = sc.nextDouble();
+         System.out.println(catidad);
+         System.out.println("Y con cuantos kg de alimento alimentaras a : "+arr[index]+".");
+         double cant2 = sc.nextDouble();
+         double alimentoSobrante = (catidad - cant2);
+         System.out.println();
+         System.out.println("La cantidad de alimento sobrante es de: "+alimentoSobrante);
+
+        }else if (index == 2){
+         System.out.print("Ingresa la cantidad(kg) de alimento con la que cuentas : ");
+         double catidad = sc.nextDouble();
+         System.out.println(catidad);
+         System.out.println("Y con cuantos kg de alimento alimentaras a : "+arr[index]+".");
+         double cant2 = sc.nextDouble();
+         double alimentoSobrante = (catidad - cant2);
+         System.out.println();
+         System.out.println("La cantidad de alimento sobrante es de: "+alimentoSobrante);
+
+        }else if (index == 3){
+         System.out.print("Ingresa la cantidad(kg) de alimento con la que cuentas : ");
+         double catidad = sc.nextDouble();
+         System.out.println(catidad);
+         System.out.println("Y con cuantos kg de alimento alimentaras a: "+arr[index]+".");
+         double cant2 = sc.nextDouble();
+         double alimentoSobrante = (catidad - cant2);
+         System.out.println();
+         System.out.println("La cantidad de alimento sobrante es de: "+alimentoSobrante);
+      }
+   } 
+}
